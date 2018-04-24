@@ -8,10 +8,9 @@
         <li class="list-group-item">
             <input type="text" class="form-control" [(ngModel)]="inputQuote">
         </li>
-        <li class="list-group-item">{{inputQuote}}</li>
 
         <li class="list-group-item">
-            <button class="btn btn-success" [disabled]="btnDisable" (click)="AddQuote()">Add quote</button>
+            <button class="btn btn-success" [disabled]="!inputQuote" (click)="AddQuote()">Add quote</button>
 
         </li>
     </ul>
