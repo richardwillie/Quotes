@@ -1,5 +1,18 @@
 <div class="container">
-    <p>
-        quotes works!
-    </p>
+    <div class="row">
+        <div class="col-4 offset-4"></div>
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item"> {{quote}}</li>
+        <li class="list-group-item">
+            <input type="text" class="form-control" [(ngModel)]="inputQuote">
+        </li>
+        <li class="list-group-item">{{inputQuote}}</li>
+
+        <li class="list-group-item">
+            <button class="btn btn-success" [disabled]="btnDisable" (click)="AddQuote()">Add quote</button>
+
+        </li>
+    </ul>
 </div>
