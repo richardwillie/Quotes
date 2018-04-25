@@ -1,19 +1,20 @@
 <div class="container">
     <div class="row">
-        <div class="col-4 offset-4"></div>
+        <div class="col-4">
 
-    <ul class="list-group">
-        <li class="list-group-item"> {{quote}}</li>
-        <li class="list-group-item">
-                <button class="btn btn-info" (click)="InsertQuote()">add quote</button>
-        </li>
-            <li class="list-group-item" **ngIf="Inserting">
-                <input type="text" class="form-control" [(ngModel)]="inputQuote">
-                <br>
+            <ul class="list-group">
+                <li class="list-group-item"> {{quote}}</li>
+                <li class="list-group-item">
+                    <button class="btn btn-info" (click)="InsertQuote()">add quote</button>
+                </li>
+                <li class="list-group-item" *ngIf="Inserting">
+                    <input type="text" class="form-control" [(ngModel)]="inputQuote">
+                    <br>
 
-                <button class="btn btn-success" [disabled]="!inputQuote" (click)="AddQuote()">submit</button>
+                    <button class="btn btn-success" [disabled]="!inputQuote" (click)="AddQuote()">submit</button>
 
-        </li>
-    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>

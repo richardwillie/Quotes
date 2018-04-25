@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Quote } from '@angular/compiler';
 
 @Component({
   selector: 'app-quotes',
@@ -6,17 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-  quote = 'God grant me the serenity to accept the things I cannot change, the courage to change the things I can, and the wisdom to know the difference.'
+  push: any;
+  quote = []
   inputQuote = null;
-  btnDisable = false;
+  btnDisable = false; 
+  Inserting = false
   AddQuote(){
-    this.quote = this.inputQuote
+    this.inputQuote.push(this.inputQuote)
     this.inputQuote = null 
+    this.Inserting = false
+
+  }
+  InsertQuote(){
+    this.Inserting = !this.Inserting
   } 
 
-  constructor() { }
+ constructor() {
+
+   }
 
   ngOnInit() {
   }
-
+ 
 }
